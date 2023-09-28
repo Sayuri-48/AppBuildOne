@@ -9,8 +9,7 @@ import UIKit
 
 class secondViewController: UIViewController {
 
-    var int1 = 39
-    var int2 = 58
+    let int1 = 39, int2 = 58
     
     
     @IBOutlet weak var item2Label1: UILabel!
@@ -30,16 +29,15 @@ class secondViewController: UIViewController {
     @IBAction func item2Button(_ sender: Any)
     {
         let int3 = int1 + int2
+        item2Label2.text = "\(int3)"
         
         if int3 < 100
         {
             self.view.backgroundColor = UIColor.magenta
-            item2Label2.text = "\(int3)"
         }
         else
         {
             self.view.backgroundColor = UIColor.systemGreen
-            item2Label2.text = "\(int3)"
         }
         
     }
